@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist", //Indica la ruta de salida del compilado
+    "rootDir": "./src", //Indica de que ruta tomara los archivos para el compilado
+    "lib": ["ESNext"], //Remplanza a la nueva version de ECMAScrip en caso de existir, para compilar
+    "strict": false, //Modo estricto tipado de datos etc
+    "sourceMap": true, //Genera MAPS
+    "esModuleInterop": true, //Permite importar libreria desarrollada en JS en caso de trabajar con TS
+    "declaration": true, //archivos de definicion,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ESNext",
+    "moduleResolution": "nodenext",
+    "module": "NodeNext"
+  },
+  "include": ["src/**/*.ts"], //incluir archivos en la compilacion
+  "exclude": ["src/**/*.test.ts"]
+}
