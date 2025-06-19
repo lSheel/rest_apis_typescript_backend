@@ -72,7 +72,7 @@ export const updateProduct = async (req: Request, res: Response) => {
 export const updateAvailability = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const product = await Product.findByPk(id, { logging: false });
+    const product = await Product.findByPk(id);
 
     if (!product) {
       res.status(404).json({
@@ -80,8 +80,11 @@ export const updateAvailability = async (req: Request, res: Response) => {
       });
     }
 
+    console.log(product.availability);
     //Actualizar
     product.availability = !product.dataValues.availability;
+
+    console.log(product.availability);
     await product.save();
 
     res.json({ data: product });

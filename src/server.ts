@@ -15,9 +15,9 @@ import morgan from 'morgan'
     try {
         await db.authenticate()
         db.sync()
-        //console.log(colors.magenta('Conexion exitosa a la base de datos'))
+        console.log(colors.magenta('Conexion exitosa a la base de datos'))
     } catch (error) {
-        //console.log(error)
+        console.log(error)
         console.log(colors.bgRed.white('Hubo un error al conectarse a la base de datos'))
     }
     
