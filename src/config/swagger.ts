@@ -4,6 +4,9 @@ import { SwaggerUiOptions } from "swagger-ui-express";
 const options: swaggerJSDoc.Options = {
   swaggerDefinition: {
     openapi: "3.0.2",
+     servers: [
+      { url: "https://rest-apis-typescript-frontend-sandy.vercel.app", description: "Production server" },
+    ],
     tags: [
       {
         name: "Products",
