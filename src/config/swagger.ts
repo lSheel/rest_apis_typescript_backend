@@ -5,7 +5,7 @@ const options: swaggerJSDoc.Options = {
   swaggerDefinition: {
     openapi: "3.0.2",
      servers: [
-      { url: "https://rest-apis-typescript-frontend-sandy.vercel.app", description: "Production server" },
+      { url: "https://rest-apis-typescript-frontend-3oh0c8ub1.vercel.app", description: "Production server" },
     ],
     tags: [
       {
