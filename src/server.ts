@@ -26,15 +26,15 @@ import morgan from 'morgan'
  //Instancia de express
  const server = express()
 
-const corsOptions : CorsOptions= {
-    origin:  function(origin, callback){
-        if(origin === process.env.FRONTEND_URL){
-            callback(null, true)
-        }
-        else{
-            callback(new Error('Error de cors'))
-        }
+// Permitir Conexiones
+const corsOptions : CorsOptions = {
+  origin: function(origin, callback) {
+    if(origin === process.env.FRONTEND_URL || process.env.BACKEND_URL) {
+      callback(null, true)
+    } else {
+      callback(new Error("Error de CORS"))
     }
+  }
 }
 
 server.use(cors(corsOptions))
